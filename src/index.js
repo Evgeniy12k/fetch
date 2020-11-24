@@ -11,7 +11,7 @@ import sendForm from './modules/sendForm';
 import command from './modules/toggleImg';
 
 // timer
-countTimer('11 november 2020'); 
+countTimer('31 december 2020'); 
 // menu    
 toggleMenu();   
 // popup 

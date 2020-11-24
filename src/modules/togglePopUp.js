@@ -29,6 +29,9 @@ const togglePopUp = () => {
     popup.addEventListener('click', (event) => {
         let target = event.target;
 
+        const formName = document.getElementById('form3-name'),
+              formPhone = document.getElementById('form3-phone'),
+              formEmail = document.getElementById('form3-email');
         if(target.classList.contains('popup-close')){
             if(window.innerWidth > 768){
                 popupContent.style.opacity = '1';
@@ -38,6 +41,10 @@ const togglePopUp = () => {
                     popupContent.style.opacity = `${n}`;
 
                     if (popupContent.style.opacity === '-0.1') {
+                        formName.value = '';
+                        formPhone.value = '';
+                        formEmail.value = '';
+                        
                         popup.style.display = 'none';
                         clearInterval(timer);
                     }
@@ -48,7 +55,7 @@ const togglePopUp = () => {
                 popup.style.display = 'none';
             }
         }else {
-            target = target.closest('.popup-content');
+            target = target.closest('.popup');
             if(!target){
                 popup.style.display = 'none';
             }
@@ -57,11 +64,11 @@ const togglePopUp = () => {
     popup.addEventListener('click', (event) => {
         let target = event.target;
 
-        if (target.classList.contains('popup-content')){
+        if (target.classList.contains('popup')){
             popup.style.display = 'none';
 
         } else {
-            target = target.closest('.popup-content');
+            target = target.closest('.popup');
 
             if(!target){
                 popup.style.display = 'none';

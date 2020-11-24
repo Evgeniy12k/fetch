@@ -14,7 +14,8 @@ body.addEventListener('click', event => {
     let target = event.target;
    
        let closeMenuBtn = event.target;
-        target = target.closest('.menu');
+           target = target.closest('.menu');
+           
         if(target){
             handlerMenu();
         } else if (closeMenuBtn.classList.contains('close-btn')){

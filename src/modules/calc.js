@@ -51,12 +51,8 @@ const calc = (price = 100) => {
         if(target.matches('select') || target.matches('input')) {
                        countSum();
                    }
-   
-   
+
    });
-   
-    
-   
    };
 
    export default calc;
